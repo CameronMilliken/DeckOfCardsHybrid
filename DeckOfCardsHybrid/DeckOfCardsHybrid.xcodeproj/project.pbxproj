@@ -13,6 +13,8 @@
 		B42D64C6221355C800346AF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B42D64C4221355C800346AF7 /* LaunchScreen.storyboard */; };
 		B42D64C9221355C800346AF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B42D64C8221355C800346AF7 /* main.m */; };
 		B42D64D32213562400346AF7 /* CRMCard.m in Sources */ = {isa = PBXBuildFile; fileRef = B42D64D22213562400346AF7 /* CRMCard.m */; };
+		B42D64D722136F3800346AF7 /* CRMCardController.m in Sources */ = {isa = PBXBuildFile; fileRef = B42D64D622136F3800346AF7 /* CRMCardController.m */; };
+		B42D64DA22137BCB00346AF7 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42D64D922137BCB00346AF7 /* CardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		B42D64C8221355C800346AF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B42D64D12213562400346AF7 /* CRMCard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRMCard.h; sourceTree = "<group>"; };
 		B42D64D22213562400346AF7 /* CRMCard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRMCard.m; sourceTree = "<group>"; };
+		B42D64D522136F3800346AF7 /* CRMCardController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRMCardController.h; sourceTree = "<group>"; };
+		B42D64D622136F3800346AF7 /* CRMCardController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRMCardController.m; sourceTree = "<group>"; };
+		B42D64D822137BCA00346AF7 /* DeckOfCardsHybrid-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DeckOfCardsHybrid-Bridging-Header.h"; sourceTree = "<group>"; };
+		B42D64D922137BCB00346AF7 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +64,11 @@
 		B42D64B8221355C800346AF7 /* DeckOfCardsHybrid */ = {
 			isa = PBXGroup;
 			children = (
+				B42D64D822137BCA00346AF7 /* DeckOfCardsHybrid-Bridging-Header.h */,
 				B42D64D4221367C400346AF7 /* Model */,
+				B42D64DC22137BF300346AF7 /* Model Controller */,
 				B42D64CF221355E500346AF7 /* Storyboard */,
+				B42D64DB22137BD800346AF7 /* ViewController */,
 				B42D64D0221355FA00346AF7 /* Resources */,
 			);
 			path = DeckOfCardsHybrid;
@@ -95,6 +104,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		B42D64DB22137BD800346AF7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B42D64D922137BCB00346AF7 /* CardViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B42D64DC22137BF300346AF7 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B42D64D522136F3800346AF7 /* CRMCardController.h */,
+				B42D64D622136F3800346AF7 /* CRMCardController.m */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,6 +152,7 @@
 				TargetAttributes = {
 					B42D64B5221355C800346AF7 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -167,6 +194,8 @@
 			files = (
 				B42D64C9221355C800346AF7 /* main.m in Sources */,
 				B42D64BB221355C800346AF7 /* AppDelegate.m in Sources */,
+				B42D64D722136F3800346AF7 /* CRMCardController.m in Sources */,
+				B42D64DA22137BCB00346AF7 /* CardViewController.swift in Sources */,
 				B42D64D32213562400346AF7 /* CRMCard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +338,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/DeckOfCardsHybrid/Resources/Info.plist";
@@ -318,6 +348,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Cameron-Milliken.DeckOfCardsHybrid";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DeckOfCardsHybrid/DeckOfCardsHybrid-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -326,6 +359,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/DeckOfCardsHybrid/Resources/Info.plist";
@@ -335,6 +369,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Cameron-Milliken.DeckOfCardsHybrid";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DeckOfCardsHybrid/DeckOfCardsHybrid-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
