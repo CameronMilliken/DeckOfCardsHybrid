@@ -21,6 +21,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYw-KZ-cWM">
                                 <rect key="frame" x="8" y="476" width="359" height="30"/>
                                 <color key="backgroundColor" red="0.68494210025380708" green="0.53196524180805882" blue="0.38552392512507322" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CkE-Vn-Ax1"/>
+                                    <constraint firstAttribute="width" secondItem="VYw-KZ-cWM" secondAttribute="height" multiplier="359:30" id="QBG-AT-bhE"/>
+                                </constraints>
                                 <state key="normal" title="Draw Card">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -28,7 +32,7 @@
                                     <action selector="drawButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g0S-4U-4oM"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WLv-Gn-EfQ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WLv-Gn-EfQ">
                                 <rect key="frame" x="77" y="83" width="221" height="314"/>
                             </imageView>
                         </subviews>
